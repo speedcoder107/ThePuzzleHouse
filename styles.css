@@ -69,3 +69,43 @@ img.zoom {
 img.zoom:hover {
     transform: scale(1.1);
 }
+  /* Mobile-friendly styling */
+  @media (max-width: 768px) {
+    /* Change layout to vertical on small screens */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+  
+    /* Remove sticky behavior on mobile */
+    .site-header {
+      position: relative; /* Remove sticky behavior */
+    }
+  
+    .nav-link {
+      padding: 15px 0;  /* Adjust padding for better spacing */
+      text-align: center;
+    }
+  }
+  
+  /* Desktop styling */
+  @media (min-width: 769px) {
+    /* Keep header horizontal and sticky on larger screens */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+  
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .nav-link {
+      padding: 15px 25px; /* Horizontal padding for desktop view */
+    }
+  }
+  
